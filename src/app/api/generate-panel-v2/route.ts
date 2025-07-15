@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { detectCharactersInScene, generatePanelWithReferences } from '../../../lib/openai_2';
-import { Character } from '@/types';
+import { Character } from '../../../types';
 
 export async function POST(request: NextRequest) {
   try {

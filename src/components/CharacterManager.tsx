@@ -1,9 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import { Character } from '@/types';
-import { Button } from '../components/ui/button';
-import { Input } from '../components/ui/input';
+import { Character } from '../types';
+import { Button } from './ui/button';
+import { Input } from './ui/input';
 import { Textarea } from '../components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { generateId, generateCharacterTemplate } from '../lib/utils';
@@ -12,6 +12,8 @@ import { Plus, Trash2, Image, Wand2 } from 'lucide-react';
 interface CharacterManagerProps {
   characters: Character[];
   onCharactersChange: (characters: Character[]) => void;
+  aiImageUrl: any,
+  setAiImageUrl: any,
 }
 
 let brakeImage = false;
@@ -19,10 +21,9 @@ let brakeImage = false;
 let pollingTimeout: NodeJS.Timeout | null = null;
 
 
-export default function CharacterManager({ characters, onCharactersChange }: CharacterManagerProps) {
+export default function CharacterManager({ characters, onCharactersChange, aiImageUrl, setAiImageUrl }: CharacterManagerProps) {
   const [isGenerating, setIsGenerating] = useState<string | null>(null);
   const [imageLoader, setImageLoader] = useState<boolean>(false);
-  const [aiImageUrl, setAiImageUrl] = useState<any>([]);
   const [ashu, setAshu] = useState<any>(null);
   const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
   const isOperation = aiImageUrl?.find((img: any) => img?.image_type === 'operation');

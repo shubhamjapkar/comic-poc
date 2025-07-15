@@ -10,9 +10,11 @@ import { Plus, Trash2, FolderOpen } from 'lucide-react';
 interface ProjectManagerProps {
   onProjectSelect: (project: StoredProject) => void;
   currentProject?: any;
+  aiImageUrl: any,
+  setAiImageUrl: any,
 }
 
-export default function ProjectManager({ onProjectSelect, currentProject }: ProjectManagerProps) {
+export default function ProjectManager({ onProjectSelect, currentProject, aiImageUrl, setAiImageUrl }: ProjectManagerProps) {
   const [projects, setProjects] = useState<StoredProject[]>([]);
   const [newProjectName, setNewProjectName] = useState('');
   const [showCreateForm, setShowCreateForm] = useState(false);

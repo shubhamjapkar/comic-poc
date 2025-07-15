@@ -1,5 +1,5 @@
-import OpenAI from './openai';
-import { CharacterDetectionResponse } from '@/types';
+import OpenAI from 'openai';
+import { CharacterDetectionResponse } from '../types';
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY || '',
@@ -96,7 +96,8 @@ export async function detectCharactersInScene(content: string): Promise<Characte
 export async function generatePanelWithReferences(
   currentScene: string,
   characterImages: Array<{name: string, imageBase64: string}>,
-  previousScenes: Array<{scene: string, image: string}> = []
+  previousScenes: Array<{scene: string, image: string}> = [],
+  previousPanelImage?: any
 ): Promise<string> {
   
   console.log('=== PANEL GENERATION ===');

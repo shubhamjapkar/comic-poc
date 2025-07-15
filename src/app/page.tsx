@@ -13,6 +13,8 @@ import { StoredProject, saveProject } from '../lib/storage';
 
 export default function Home() {
   const [currentProject, setCurrentProject] = useState<StoredProject | null>(null);
+  const [aiImageUrl, setAiImageUrl] = useState<any>([]);
+
   const [comic, setComic] = useState<Comic>({
     id: generateId(),
     title: 'My Comic',
@@ -105,6 +107,8 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <CharacterManager
+                  aiImageUrl={aiImageUrl}
+                  setAiImageUrl={setAiImageUrl}
                   characters={comic.characters}
                   onCharactersChange={updateCharacters}
                 />
