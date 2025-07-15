@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { generateCharacterImage } from '@/lib/openai';
+import { generateCharacterImage } from '../../../lib/openai';
 
 export async function POST(request: NextRequest) {
   try {

@@ -1,15 +1,15 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { StoredProject, getProjects, createNewProject, deleteProject } from '@/lib/storage';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { StoredProject, getProjects, createNewProject, deleteProject } from '../lib/storage';
+import { Button } from '../components/ui/button';
+import { Input } from '../components/ui/input';
+import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Plus, Trash2, FolderOpen } from 'lucide-react';
 
 interface ProjectManagerProps {
   onProjectSelect: (project: StoredProject) => void;
-  currentProject?: StoredProject;
+  currentProject?: any;
 }
 
 export default function ProjectManager({ onProjectSelect, currentProject }: ProjectManagerProps) {

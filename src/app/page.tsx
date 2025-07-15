@@ -1,15 +1,15 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Character, Page, Panel, Comic } from '@/types';
+import { Character, Page, Panel, Comic } from '../types';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import CharacterManager from '@/components/CharacterManager';
-import PanelLayout from '@/components/PanelLayout';
-import ComicEditor from '@/components/ComicEditor';
-import ProjectManager from '@/components/ProjectManager';
-import { generateId } from '@/lib/utils';
-import { StoredProject, saveProject } from '@/lib/storage';
+import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+import CharacterManager from '../components/CharacterManager';
+import PanelLayout from '../components/PanelLayout';
+import ComicEditor from '../components/ComicEditor';
+import ProjectManager from '../components/ProjectManager';
+import { generateId } from '../lib/utils';
+import { StoredProject, saveProject } from '../lib/storage';
 
 export default function Home() {
   const [currentProject, setCurrentProject] = useState<StoredProject | null>(null);

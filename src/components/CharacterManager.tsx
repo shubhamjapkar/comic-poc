@@ -2,11 +2,11 @@
 
 import { useState } from 'react';
 import { Character } from '@/types';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { generateId, generateCharacterTemplate } from '@/lib/utils';
+import { Button } from '../components/ui/button';
+import { Input } from '../components/ui/input';
+import { Textarea } from '../components/ui/textarea';
+import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
+import { generateId, generateCharacterTemplate } from '../lib/utils';
 import { Plus, Trash2, Image, Wand2 } from 'lucide-react';
 
 interface CharacterManagerProps {

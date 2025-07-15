@@ -1,12 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import { Comic, Character, Panel } from '@/types';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { generateId } from '@/lib/utils';
+import { Comic, Character, Panel } from '../types';
+import { Button } from '../components/ui/button';
+import { Textarea } from '../components/ui/textarea';
+import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Play, Save } from 'lucide-react';
 
 interface ComicEditorProps {
