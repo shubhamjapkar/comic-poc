@@ -1,0 +1,21 @@
+{
+  "model": "gpt-4o",
+  "input": [
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "input_text",
+          "text": "Generate a comic book panel illustration for: \"goku standing still on rocky terrain, tattered clothes, determined expression, wind blowing gently, dramatic clouds forming above, early power-up stance, anime-style line art, dragon ball z manga style, cinematic composition\".\n\nStyle: Professional comic book art with clean lines, vibrant colors, and dynamic composition. Do NOT include any speech bubbles, text bubbles, dialogue, or written text in the image - the user will add these manually later.\n\nContext: You will be provided with reference images of characters that appear in this scene. IMPORTANT: Use these reference images to maintain visual consistency for character faces and body types only. The characters' faces, facial features, hair, skin tone, and body proportions should match the reference images exactly. However, their clothing, poses, actions, and expressions should adapt according to the current scene context and narrative flow.\n\nUse the exact same drawing/cartoon style as used in reference images. \nTask: Create a single comic book style panel image that depicts the described scene using the provided references. Remember: Keep character faces and body types consistent with reference images, but allow clothing, poses, actions, and expressions to change based on the scene requirements and narrative flow."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "type": "image_generation",
+      "quality": "high",
+      "size": "1024x1024"
+    }
+  ]
+}
