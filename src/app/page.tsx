@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Character, Page, Panel, Comic } from '@/types';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import CharacterManager from '@/components/CharacterManager';
 import PanelLayout from '@/components/PanelLayout';
