@@ -1,2 +1,29 @@
 .idea
 node_modules
+
+.DS_Store
+
+# Now files
+.vercel
+
+# .env files
+.env.*.local
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+*.iml
+
+node_modules
+
+# Next files
+.next
+
+# npm packages
+node_modules
+.env
